@@ -1,5 +1,5 @@
 import json
-import os
+
 
 def aggregate_nodes(response_json):  # a list consists of user_response, followers_response, following_response
     """
@@ -15,7 +15,13 @@ def aggregate_nodes(response_json):  # a list consists of user_response, followe
     user_nodes = {"nodes": {}}
     for rj in response_json:
         for data in rj["data"]:
-            user_nodes["nodes"].setdefault(str(data["id"]), {"name": data["name"], "username": data["username"]})
+            user_nodes["nodes"].setdefault(
+                str(data["id"]),
+                {
+                    "name": data["name"],
+                    "username": data["username"],
+                }
+            )
             json_str = json.dumps(user_nodes, indent=4, sort_keys=True, ensure_ascii=False)
 
     with open("json/user_nodes.json", "w", encoding="utf-8") as f:
@@ -30,7 +36,7 @@ def get_name(user_id):
         name = json_obj["nodes"][str(user_id)]["name"]
 
     return name
-            
+
 
 def get_user_name(user_id):
     with open("json/user_nodes.json", "r") as f:

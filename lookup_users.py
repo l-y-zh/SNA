@@ -1,12 +1,11 @@
 import requests
-import os
-import json
 
 from config import BEARER_TOKEN
+import json
 
 
 def create_url(usernames, userfields):
-    user_names = usernames  #up to 100 comma-separated usernames.
+    user_names = usernames  # up to 100 comma-separated usernames.
 
     """
     user.fields is adjustable, options include:
@@ -15,9 +14,9 @@ def create_url(usernames, userfields):
     public_metrics, url, username, verified, and withheld
     """
     user_fields = userfields
-    
+
     url = f'https://api.twitter.com/2/users/by?{user_names}&{user_fields}'
-    
+
     return url
 
 
@@ -35,12 +34,10 @@ def connect_to_endpoint(url):
         raise Exception(
             f'Request returned an error: {response.status_code} {response.text}'
         )
-    return response.json()    
+    return response.json()
 
 
 if __name__ == "__main__":
     url = create_url("usernames=TwitterDev,TwitterAPI", "user.fields=description,created_at")
     json_response = connect_to_endpoint(url)
     print(json.dumps(json_response, indent=4, sort_keys=True))
-
-    

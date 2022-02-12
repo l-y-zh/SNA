@@ -1,8 +1,6 @@
 import json
-
-import lookup_users as user
 import lookup_follows as follows
-import tools as t
+import lookup_users as user
 
 user_ids = []
 
@@ -43,4 +41,3 @@ if user_ids:
 # t.aggregate_nodes([user_response, followers_response, following_response])
 # print(t.get_name(44196397))
 # print(t.get_user_name(44196397))
-
