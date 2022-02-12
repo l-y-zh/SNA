@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "created_at": "2009-06-02T20:12:29.000Z",
+            "description": "",
+            "id": "44196397",
+            "name": "Elon Musk",
+            "username": "elonmusk"
+        },
+        {
+            "created_at": "2008-02-10T01:12:32.000Z",
+            "description": "electric cars, giant batteries and solar",
+            "id": "13298072",
+            "name": "Tesla",
+            "username": "Tesla"
+        },
+        {
+            "created_at": "2009-04-23T21:53:30.000Z",
+            "description": "SpaceX designs, manufactures and launches the world’s most advanced rockets and spacecraft",
+            "id": "34743251",
+            "name": "SpaceX",
+            "username": "SpaceX"
+        }
+    ]
+}
