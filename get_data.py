@@ -40,7 +40,7 @@ if user_ids:
         except Exception as e:
             print(f'error in getting following data: {e}')
 
-# t.aggrate_nodes([user_response, followers_response, following_response])
+# t.aggregate_nodes([user_response, followers_response, following_response])
 # print(t.get_name(44196397))
 # print(t.get_user_name(44196397))
 
