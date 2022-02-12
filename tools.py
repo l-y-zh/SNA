@@ -1,7 +1,7 @@
 import json
 import os
 
-def aggrate_nodes(response_json):  # a list consists of user_response, followers_response, following_response
+def aggregate_nodes(response_json):  # a list consists of user_response, followers_response, following_response
     """
     {
         nodes: {
